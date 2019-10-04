@@ -2,15 +2,14 @@
 title: Understanding the Gatsby lifecycle in depth
 author: Dennis Brotzky
 date: 2017-04-28
-hero: "./images/hero-2.jpg"
+hero: ''
 excerpt: With the growing community interest in Gatsby, we hope to create more resources
   that make it easier for anyone to grasp the power of this incredible tool.
 
 ---
-![](/preview.jpg)Hello, world! This is a demo post for `gatsby-theme-novela`. Novela is built by the team at [Narative](https://narative.co), and built for everyone that loves the web.
+Привіт Світ! Це демонстраційна публікація для `gatsby-theme-novela`. Нові команди побудовані у [Наративі](https://narative.co) та створені для всіх, хто любить Інтернет.
 
-At Narative, we’ve been fans of Gatsby from day one, using it to build performant and flexible products for both clients and ourselves. With the growing community interest in Gatsby, we hope to create more resources that make it easier for anyone to grasp the power of this incredible tool.
-At Narative, we’ve been fans of Gatsby from day one, using it to build performant and flexible products for both clients and ourselves. With the growing community interest in Gatsby, we hope to create more resources that make it easier for anyone to grasp the power of this incredible tool.
+У Наративі, ми бачили шанувальники Гетсбі з наступного дня, використовуючи його для створення ефективних та гнучкових продуктів як для клієнтів, так і для себе. Зростаючи інтелектуальні громади до Гетсбі, ми сподіваємось, що більше ресурсів, які полегшують ці ці неймовірні інструменти. У Наративі, ми бачили шанувальники Гетсбі з наступного дня, використовуючи його для створення продуктивних та гнучкових продуктів як для clieand orurelves. Зростаючи інтелектуальні громади до Гетсбі, ми сподіваємось, що більше ресурсів, які полегшують ці ці неймовірні інструменти.
 
 ```js
 import React from "react";
@@ -73,9 +72,9 @@ function SocialLinks({ fill = "#73737D" }: { fill: string }) {
 }
 ```
 
-This is another paragraph after the code block.
+Це ще один абзац після блоку коду.
 
-## This is a secondary heading
+## Це середній заголовок
 
 ```jsx
 import React from "react";
@@ -87,17 +86,17 @@ export default props => (
 );
 ```
 
-At Narative, we’ve been fans of Gatsby from day one, using it to build performant and flexible products for both clients and ourselves. With the growing community interest in Gatsby, we hope to create more resources that make it easier for anyone to grasp the power of this incredible tool.
+У Наративі, ми бачили шанувальники Гетсбі з наступного дня, використовуючи його для створення ефективних та гнучкових продуктів як для клієнтів, так і для себе. Зростаючи інтелектуальні громади до Гетсбі, ми сподіваємось, що більше ресурсів, які полегшують всі ці неймовірні інструменти.
 
-In this article I’ll explain how Gatsby’s lifecycle works and what the Gatsby specific files are for.
+Нам здається, що він працював у циклі Гетсбі і для цього були конкретні файли Гетсбі.
 
-One of the challenges I had when learning Gatsby was trying to understand the Gatsby lifecycle. React introduced me to the concept of a Component Lifecycle, but when I started learning Gatsby I felt at a loss again. I remember looking through example repositories and seeing Gatsby specific files in every project and thinking to myself, “What are these files for? Why are gatsby-node.js, gatsby-browser.js, and gatsby-ssr.js generated in the default starter kit? Can I really delete these files?”
+Одним із викликів, які виявилися в мене при навчанні Гетсбі, спровоковано спровокований такий цикл Гетсбі. Реактивне пізнання мене з боку кожного циклу компонентів, але коли я почав перевіряти Гетсбі, я вже зазнав себе втраченим. Я пам'ятаю, переглядаю, хто схожий і бачив певні файли Гетсбі у своєму проекті та думці, що: «Для чого ці файли? Чому gatsby-node.js, gatsby-browser.js і gatsby-ssr.js генеруються у початковому комплекті для замовлення? Чи можу я читати ці файли? "
 
-In this article I’ll explain the how Gatsby’s lifecycle works and what the Gatsby specific files are for.
+Нам здається, що він працював у циклі Гетсбі і для цього були конкретні файли Гетсбі.
 
-## How does Gatsby work?
+## Як працює Гетсбі?
 
-To understand what these files are for, we must first understand how Gatsby works. Gatsby is a static site generator that pulls data from sources you provide and generates a website/app for you.
+Ми дивімось, що ми ці файли, ми повинні спершу виробити, як це працює Гетсбі. Гетсбі - це статистичний генератор веб-сайтів, який представив надійне джерело та створив веб-сайт / додав для вас.
 
 Gatsby requires Node to be installed to run the Bootstrap and Build sequences. Under the hood, Gatsby uses Webpack to build and start a development server amongst other things.
 
@@ -115,26 +114,18 @@ And finally, once the generated files are deployed, Gatsby lives in the browser.
 
 What’s important to remember is that Gatsby’s lifecycle can be aggregated into 3 main sequences:
 
-![This is the alt text](./images/gatsby-narative-output.png)
-
 * Bootstrap
 * Build
 * Browser
 * These three sequences makeup the Gatsby lifecycle.
 
-Parts of the lifecycle are visible when running $ gatsby develop
-A peak into the Gatsby lifecycle when running $ gatsby develop
-A peak into the Gatsby lifecycle when running $ gatsby develop
-If you’re familiar with React and the component lifecycle, Gatsby’s lifecycle is almost the same concept. Just like React’s lifecycle, Gatsby exposes hooks for developers to build on top of. Those lifecycle hooks are accessed through Gatsby specific files such as gatsby-node.js, gatsby-browser.js and gatsby-ssr.js.
+Parts of the lifecycle are visible when running $ gatsby develop A peak into the Gatsby lifecycle when running $ gatsby develop A peak into the Gatsby lifecycle when running $ gatsby develop If you’re familiar with React and the component lifecycle, Gatsby’s lifecycle is almost the same concept. Just like React’s lifecycle, Gatsby exposes hooks for developers to build on top of. Those lifecycle hooks are accessed through Gatsby specific files such as gatsby-node.js, gatsby-browser.js and gatsby-ssr.js.
 
-What are the Gatsby specific files for?
-gatsby-config.js
-A place to put all your site configurations such as plugins, metadata, and polyfills. This file is the blueprint of your application and is where Gatsby really shines with its plugin system. When you run $ gatsby develop or $ gatsby build gatsby-config.js is the first file to be read and validated.
+What are the Gatsby specific files for? gatsby-config.js A place to put all your site configurations such as plugins, metadata, and polyfills. This file is the blueprint of your application and is where Gatsby really shines with its plugin system. When you run $ gatsby develop or $ gatsby build gatsby-config.js is the first file to be read and validated.
 
 Most of your time spent in gatsby-config.js will likely revolve around source plugins, image plugins, offline support, styling options, and site metadata.
 
-gatsby-node.js
-Gatsby runs a Node process when you develop or build your website and uses Webpack under the hood to spin up a development server with hot reloading. During the Node process Gatsby will load plugins, check the cache, bootstrap the website, build the data schema, create pages, and deal with some configuration and data management.
+gatsby-node.js Gatsby runs a Node process when you develop or build your website and uses Webpack under the hood to spin up a development server with hot reloading. During the Node process Gatsby will load plugins, check the cache, bootstrap the website, build the data schema, create pages, and deal with some configuration and data management.
 
 Everything that occurs during the Bootstrap and Build sequences occurs in gatsby-node.js. This means it’s the perfect place to create pages dynamically based off data from a source plugin or modify Gatsby’s Webpack or Babel configs.
 
@@ -179,4 +170,4 @@ Gatsby is built with React at its core and shares a common API pattern, the life
 
 Without the Gatsby lifecycle, it would be impossible to customize and modify your project beyond the base configuration, leaving developers with a rigid and poor developer experience. This power and flexibility has helped us build amazing web projects for clients like Hopper!
 
-Gatsby is a staple within our engineering process at Narative, helping us help our clients build the products they’ve always dreamed of, and the ones they’re yet to dream up.
+Гетсбі є основним компонентом нашого інженерного процесу в Narative, допомагаючи нам допомагати нашим клієнтам будувати продукти, про які вони завжди мріяли, і ті, про які вони ще мріють.
