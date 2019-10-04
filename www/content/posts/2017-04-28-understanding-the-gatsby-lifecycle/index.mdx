@@ -98,42 +98,42 @@ export default props => (
 
 Ми дивімось, що ми ці файли, ми повинні спершу виробити, як це працює Гетсбі. Гетсбі - це статистичний генератор веб-сайтів, який представив надійне джерело та створив веб-сайт / додав для вас.
 
-Gatsby requires Node to be installed to run the Bootstrap and Build sequences. Under the hood, Gatsby uses Webpack to build and start a development server amongst other things.
+Оновлена ​​версія встановленої версії для завантаження користувачів Bootstrap і Build. Під кришкою, веб-пакет використовує веб-пакет для створення та запуску сервера, який розкриває середні речі.
 
-### Step 1
+### Крок 1
 
-During the Bootstrap sequence, which occurs every time you run $ gatsby develop, there are about 20 events that fire ranging from validating your gatsby-config.js to building the data schemas and pages for your site. For example, the Bootstrap sequence is where Gatsby will create pages. If you want an in depth look of all 20 Bootstrap steps Swyx shared a fantastic Gist that goes into more detail.
+Під час розширення Bootstrap, який ви робите, ви використовуєте $ gatsby розробити, зайнявшись 20 разів, відкривши для перевірки ваш gatsby-config.js, який цікавить інформацію про сторінку та сторінку для веб-сайту. Наприклад, перевірити Bootstrap - це те, що створюються сторінки. Якщо ви шукаєте глибоко з 20 кроків Bootstrap, Swyx діліться фантастичним принципом, який детальніше розглядає.
 
-### Step 2
+### Крок 2
 
-The Build sequence is very similar to the Bootstrap sequence, except it’s run with production optimizations and will output static files ready for deployment. Think of it as building your React application in production mode vs development.
+Послідовні побудови дуже схожі на велику висоту завантаження програм Bootstrap, щоб зрозуміти, що вона працює з оптимізацією роботи та вводить статистичні файли, готові до розгортання. Підтримай про те, як звичайний варіант Реагуйте в режимі розвитку та розвитку.
 
-### Step 3
+### Крок 3
 
-And finally, once the generated files are deployed, Gatsby lives in the browser. Gatsby cleverly generates a static website that turns into a web app after initial load, which extends the lifecycle to the browser.
+Після цього, після розкриття створених файлів, Гетсбі живе у браузері. Гетсбій створює статистичний веб-сайт, який після початкового завантаження перетворюється на веб-додаток, який робить більшу висоту циклу для браузера.
 
-What’s important to remember is that Gatsby’s lifecycle can be aggregated into 3 main sequences:
+Ви можете пам’ятати, що можливий цикл Гетсбі може бути доступний у 3 основних рівнях:
 
-* Bootstrap
-* Build
-* Browser
-* These three sequences makeup the Gatsby lifecycle.
+* Завантажувач
+* Побудуємо
+* Веб-переглядач
+* Ці три надійності складають великий цикл Гетсбі.
 
-Parts of the lifecycle are visible when running $ gatsby develop A peak into the Gatsby lifecycle when running $ gatsby develop A peak into the Gatsby lifecycle when running $ gatsby develop If you’re familiar with React and the component lifecycle, Gatsby’s lifecycle is almost the same concept. Just like React’s lifecycle, Gatsby exposes hooks for developers to build on top of. Those lifecycle hooks are accessed through Gatsby specific files such as gatsby-node.js, gatsby-browser.js and gatsby-ssr.js.
+Частичне різноманітне цикл знайдеться із-за запущеного $ гецьби зараз Так само, як власник циклу React, Гетсбі розкривають гачки для виробників, над тим, що буде. Доступний для різних циклів можливий доступ до спеціальних файлів Gatsby, таких як gatsby-node.js, gatsby-browser.js та gatsby-ssr.js.
 
-What are the Gatsby specific files for? gatsby-config.js A place to put all your site configurations such as plugins, metadata, and polyfills. This file is the blueprint of your application and is where Gatsby really shines with its plugin system. When you run $ gatsby develop or $ gatsby build gatsby-config.js is the first file to be read and validated.
+Для чого потрібні файли Гетсбі? gatsby-config.js Місце для розміщення всіх конфігурацій вашого веб-сайту, як плагіни, метадані та поліфайли. Цей файл є основним у ваших програмах, які знають у самому Там Гетсбі Попередньо проводять свою систему системних плагінів. Коли ви використовуєте $ gatsby development або $ gatsby build gatsby-config.js, цей перший файл, який потрібно прочитати та перевірити.
 
-Most of your time spent in gatsby-config.js will likely revolve around source plugins, image plugins, offline support, styling options, and site metadata.
+Більше Попереднього вашого часу, проводячи в gatsby-config.js, буде, звичайно, буде оновлено всі джерела плагінів, вигляд плагінів, офлайн-службовців, які створюють стилізацію та метаданих сайтів.
 
-gatsby-node.js Gatsby runs a Node process when you develop or build your website and uses Webpack under the hood to spin up a development server with hot reloading. During the Node process Gatsby will load plugins, check the cache, bootstrap the website, build the data schema, create pages, and deal with some configuration and data management.
+gatsby-node.js Gatsby використовує процес Node, коли ви розробляєте веб-сайт, або використовуйте веб-сайт, використовуючи Webpack під кришкою, щоб використовувати сервер розривки з поточного переходу. Під час роботи «Вузол» Гетсбі завантажує багато платних, перевірених мультфільмів, завантажує веб-сайт, будує схему даних, використовує сторінку та використовує роботу конфігурації та управління даними.
 
-Everything that occurs during the Bootstrap and Build sequences occurs in gatsby-node.js. This means it’s the perfect place to create pages dynamically based off data from a source plugin or modify Gatsby’s Webpack or Babel configs.
+Все, що відбувається під час розширення Bootstrap і Build, відбувається в gatsby-node.js. Це означає, що це ідеальне місце для створення сторінки, яке динамічно базується на даних із вихідними плагінами, або змінює конфігурацію Webpack або Babel Gatsby.
 
-For example, if you want to move some files manually, such as a Netlify _redirects file, a good place to do it is in your gatsby-node.js file at the onPostBuild lifecycle hook.
+Ви можете відкрити всі файли, які ви відкрили, але, файл Netlify _redirects, ви знайдете файли у своїх інших файлах, які надсилаєте gatsby-node.js, щоб знайти найпростіший цикл onPostBuild.
 
-From experience, most of my time has revolved around handling data and building pages in gatsby-node.js. This file quickly becomes the piping of your entire website.
+З точки зору, більше часу в даний час розглядався питання, який був створений і створений на сторінці gatsby-node.js. Цей файл швидко переходить на весь ваш веб-сайт.
 
-## Examples of gatsby-node.js hooks:
+## Приклади гачків gatsby-node.js:
 
 * createPages
 * onCreateBabelConfig
@@ -141,15 +141,15 @@ From experience, most of my time has revolved around handling data and building 
 * onPostBuild
 * gatsby-ssr.js
 
-When you think Server Side Rendering you think of a server that takes in requests and dynamically builds pages and sends it to the client. Gatsby doesn’t do that, but it does server side render — it generates all the pages during build time.
+Коли ви думаєте, що серверне візуалізація ви думаєте про сервер, який приймає запити та динамічно створює сторінки та надсилає їх клієнту. Гетсбі цього не робить, але він робить серверну сторону - він генерує всі сторінки під час збирання.
 
-Naturally, gatsby-ssr.js allows developers to hook into that lifecycle. In my experience, most use cases revolve around injecting CSS, HTML, or Redux state information into the generated output. For example, if you need to insert third party scripts such as Analytics Tracking or a Pixel it can be done on the onRenderBody gatsby-ssr.js hook.
+Звичайно, gatsby-ssr.js дозволяє розробникам підключитися до цього життєвого циклу. На мій досвід, більшість випадків використання обертаються навколо введення інформації про стан CSS, HTML або Redux у створений результат. Наприклад, якщо вам потрібно вставити сторонні сценарії, такі як відстеження Analytics або піксель, це можна зробити на гачку onRenderBody gatsby-ssr.js.
 
-## Examples of gatsby-ssr.js hooks:
+## Приклади гачків gatsby-ssr.js:
 
 * onPreRenderHTML
 * onRenderBody
-* replaceRenderer
+* ЗамінитиРендерер
 * gatsby-browser.js
 
 Gatsby is a static site that loads a dynamic application after initial load, which means you get the benefits of a static site in a web application. gatsby-browser.js provides convenient hooks to deal with app loading, route updates, service worker updates, scroll positioning, and more.
